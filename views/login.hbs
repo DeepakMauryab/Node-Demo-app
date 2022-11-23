@@ -17,17 +17,20 @@
         <form action="/login" method="post">
                 <div>
                     <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email" placeholder="Enter Your Email">
+                    <input type="email" name="email" id="loginEmail" placeholder="Enter Your Email">
+                    <span class="loginError"></span>
                 </div>
                
                 <div>
                     <label for="pass">Password:</label>
-                    <input type="password" name="pass" id="pass" placeholder="Enter Your Password">
+                    <input type="password" name="pass" id="loginPass" placeholder="Enter Your Password">
+                    <span class="loginError"></span>
                 </div>
                 
-                <button type="submit">Login</button>
+                <button type="submit" id="loginBtn">Login</button>
 
 
         </form>
+        <script src="./js/loginValid.js"></script>
 </body>
 </html>

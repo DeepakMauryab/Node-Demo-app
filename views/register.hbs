@@ -55,38 +55,7 @@
         </div>
 
     </div>
-    <script>
-        const user = document.getElementById("name");
-        const email = document.getElementById("email");
-        const mobile = document.getElementById("mobile");
-        const pass = document.getElementById("pass");
-        const cpass = document.getElementById("cpass");
-        const button = document.getElementById("btn");
-        const errors = document.getElementsByClassName("error");
-        //console.log(errors[0].innerHTML)
-        const showError = (id, error) => {
-            const parent = id.parentElement;
-            const element = parent.lastChild;
-            element.innerHTML = error;
-            console.log(element.innerHTML)
-        };
-        const clearError = () => {
-            const errors = document.getElementsByClassName("error");
-
-            for (const error of errors) {
-                error.innerHTML = "";
-
-            }
-        };
-        button.addEventListener("click", (e) => {
-            clearError();
-            if (user.value === "") {
-                showError(user, "please enter your name");
-                e.preventDefault();
-            }
-        });
-
-    </script>
+     <script src="./js/validation.js"></script>
 </body>
 
 </html>

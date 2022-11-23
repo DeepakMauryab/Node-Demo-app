@@ -54,4 +54,8 @@ Router.post("/login", async (req, res) => {
     }
 });
 
+Router.get("/hi",(req, res)=>{
+    res.render("hi");
+})
+
 module.exports = Router;

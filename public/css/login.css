@@ -54,3 +54,7 @@ body {
     font-size: 1em;
     color: white;
 }
+.loginError{
+    color: red;
+    font-size: 1em;
+}
