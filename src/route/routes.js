@@ -1,7 +1,7 @@
 const express = require("express");
 const Router = new express.Router();
 const projectData = require("../database/model");
-const bcrypt= require("bcryptjs");
+const bcrypt = require("bcryptjs");
 
 Router.get("/", (req, res) => {
     res.render('index');
@@ -23,7 +23,6 @@ Router.post("/register", async (req, res) => {
                 conPassword: conPass
             });
             const data = await userData.save();
-            console.log(data);
             res.render('mainPage', { name: userData.name })
         } else {
             res.send(" password does not match ")
@@ -43,9 +42,9 @@ Router.post("/login", async (req, res) => {
         const checkPass = await bcrypt.compare(logPassword, login.password);
         if (checkPass) {
             res.render('mainPage', {
-                name:login.name
+                name: login.name
             })
-        }else{
+        } else {
             res.send("invalid details");
         }
 
@@ -54,8 +53,6 @@ Router.post("/login", async (req, res) => {
     }
 });
 
-Router.get("/hi",(req, res)=>{
-    res.render("hi");
-})
+
 
 module.exports = Router;

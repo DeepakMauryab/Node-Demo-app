@@ -30,6 +30,11 @@ button.addEventListener("click", (e) => {
         e.preventDefault();
 
     }
+    else if (!(email.value.includes('@'))) {
+        showError(email, "*enter correct Email");
+        e.preventDefault();
+
+    }
     else if (user.value.length <= 3) {
         showError(user, "*entered name is too short");
         e.preventDefault();

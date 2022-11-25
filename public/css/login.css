@@ -2,7 +2,7 @@ body {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    background-color: antiquewhite;
+    background: linear-gradient(45deg, black 0%, green 50%);
 }
 
 .login {
@@ -16,10 +16,12 @@ body {
 
 .login h1 {
     font-size: 3rem;
+    color: white;
     
 }
 
 .login .formData{
+    background-color: rgba(239, 199, 199, 0.629);
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -27,6 +29,7 @@ body {
     flex-direction: column;
     gap: 10px;
     border: 2px solid black;
+    border-radius: 10px;
     padding: 20px;
 
 }
