@@ -20,7 +20,9 @@ app.set("view engine", "hbs");
 // to add router?
 app.use(Router);
 
-
+// if(process.env.NODE_ENV == "production"){
+//     app.use(express.static("../public"));
+// }
 
 app.listen(3000, ()=>{
     console.log("connected at 3000");
