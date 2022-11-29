@@ -3,6 +3,7 @@ const { urlencoded } = require("express");
 const express= require("express");
 const app= new express();
 const path= require("path");
+const port = process.env.PORT ||5000;
 
 // to use my app access json
 app.use(express.json());
@@ -20,10 +21,8 @@ app.set("view engine", "hbs");
 // to add router?
 app.use(Router);
 
-// if(process.env.NODE_ENV == "production"){
-//     app.use(express.static("../public"));
-// }
 
-app.listen(3000, ()=>{
+
+app.listen(port, ()=>{
     console.log("connected at 3000");
 })
