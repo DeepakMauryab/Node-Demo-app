@@ -63,6 +63,8 @@ nav ul li button:hover{
     text-align: center;
 }
 .main .btn button{
+    width: 220px;
+    height: 40px;
     padding: 10px 75px;
     border: none;
     background-color: rgb(55, 52, 250);
@@ -91,7 +93,7 @@ nav ul li button:hover{
     background-color: rgba(255, 233, 233, 0.794);
     padding: 20px;
     display: flex;
-    height: 60vh;
+    /* height: 60vh; */
     justify-content: space-around;
 }
 .service .card{
@@ -120,4 +122,31 @@ nav ul li button:hover{
 
 .footer .data ul li{
     list-style: none;
+}
+
+@media only screen and (max-width:900px) {
+    .service{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        
+    }
+    .service .card{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:540px) {
+    .main .btn{
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul{
+        display: none;
+    }
+    .main .text{
+        padding: 20px;
+        width: 100%;
+    }
 }

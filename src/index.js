@@ -3,7 +3,7 @@ const { urlencoded } = require("express");
 const express= require("express");
 const app= new express();
 const path= require("path");
-const port = process.env.PORT ||5000;
+const port = process.env.PORT ||3000;
 
 // to use my app access json
 app.use(express.json());
