@@ -8,6 +8,7 @@ const mongooseOptions = {
     // useFindAndModify: false,
 };
 
+mongoose.set("strictQuery", false);
 mongoose.connect(DBConnect, mongooseOptions).then(()=>{
     console.log("connected database");
 }).catch((e)=>{

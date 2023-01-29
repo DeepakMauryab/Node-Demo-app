@@ -22,7 +22,7 @@ Router.post("/register", async (req, res) => {
                 password: pass,
                 conPassword: conPass
             });
-            const data = await userData.save();
+            await userData.save();
             res.render('mainPage', { name: userData.name })
         } else {
             res.send(" password does not match ")

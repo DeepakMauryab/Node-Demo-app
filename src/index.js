@@ -10,7 +10,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 // improtes database access in app
 require("./database/connect");
-const Router= require("./route/routes");
 // to use static files of html
 const statPath=path.join(__dirname, "../public");
 app.use(express.static(statPath));
@@ -19,6 +18,7 @@ app.use(express.static(statPath));
 app.set("view engine", "hbs");
 
 // to add router?
+const Router= require("./route/routes");
 app.use(Router);
 
 
